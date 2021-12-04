@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://src/actors/Pengo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/objects/Pole.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/background/waves.png" type="Texture" id=9]
 [ext_resource path="res://assets/music/pengo.ogg" type="AudioStream" id=10]
 [ext_resource path="res://src/actors/Squimo.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/objects/Key.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -156,16 +157,16 @@ collision_layer = 2147483648
 collision_mask = 2147483648
 
 [node name="tree3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1632, 568 )
+position = Vector2( 1632, 576 )
 
 [node name="Pole2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1568, 544 )
 
 [node name="tree4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1952, 184 )
+position = Vector2( 1952, 192 )
 
 [node name="tree5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2528, 184 )
+position = Vector2( 2528, 192 )
 
 [node name="StaticSnowMan" parent="." instance=ExtResource( 8 )]
 position = Vector2( 2152, 576 )
@@ -210,3 +211,6 @@ autoplay = true
 
 [node name="Squimo" parent="." instance=ExtResource( 11 )]
 position = Vector2( 672, 576 )
+
+[node name="Key" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2584, 384 )

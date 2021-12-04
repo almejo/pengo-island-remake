@@ -8,3 +8,4 @@ func _on_Door_body_entered(body):
 		$CollisionShape2D.disabled = true
 		$AnimatedSprite.play("open")
 	
+	
