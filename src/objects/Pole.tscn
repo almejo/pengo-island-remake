@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/objects/pole/pole_3.png" type="Texture" id=1]
+[ext_resource path="res://assets/objects/pole/pole_2.png" type="Texture" id=2]
+[ext_resource path="res://assets/objects/pole/pole_1.png" type="Texture" id=3]
+[ext_resource path="res://assets/objects/pole/pole_4.png" type="Texture" id=4]
+[ext_resource path="res://assets/objects/pole/pole_top.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 10.0
+} ]
+
+[node name="Pole" type="Area2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+frame = 3
+playing = true
+
+[node name="pole_top" type="Sprite" parent="."]
+position = Vector2( -1.94495, -37.7401 )
+texture = ExtResource( 5 )
