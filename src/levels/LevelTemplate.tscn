@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/actors/Pengo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/objects/Pole.tscn" type="PackedScene" id=2]
@@ -10,9 +10,10 @@
 [ext_resource path="res://src/objects/StaticSnowMan.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/background/waves.png" type="Texture" id=9]
 [ext_resource path="res://assets/music/pengo.ogg" type="AudioStream" id=10]
-[ext_resource path="res://src/actors/Squimo.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/objects/Key.tscn" type="PackedScene" id=12]
-[ext_resource path="res://src/objects/GreenGem.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/objects/GreenGem.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/actors/Squimo.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/objects/Key.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/weather/Weather.tscn" type="PackedScene" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -158,19 +159,16 @@ collision_layer = 2147483648
 collision_mask = 2147483648
 
 [node name="tree3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1632, 576 )
-
-[node name="GreenGem" parent="tree3" instance=ExtResource( 13 )]
-position = Vector2( 2120, -160 )
+position = Vector2( 1632, 568 )
 
 [node name="Pole2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1568, 544 )
 
 [node name="tree4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1952, 192 )
+position = Vector2( 1952, 184 )
 
 [node name="tree5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2528, 192 )
+position = Vector2( 2528, 184 )
 
 [node name="StaticSnowMan" parent="." instance=ExtResource( 8 )]
 position = Vector2( 2152, 576 )
@@ -213,8 +211,13 @@ tile_data = PoolIntArray( 720895, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0
 stream = ExtResource( 10 )
 autoplay = true
 
-[node name="Squimo" parent="." instance=ExtResource( 11 )]
-position = Vector2( 672, 576 )
+[node name="Squimo" parent="." instance=ExtResource( 12 )]
+position = Vector2( 808, 576 )
 
-[node name="Key" parent="." instance=ExtResource( 12 )]
-position = Vector2( 2584, 384 )
+[node name="GreenGem" parent="." instance=ExtResource( 11 )]
+position = Vector2( 3752, 416 )
+
+[node name="Key" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2656, 376 )
+
+[node name="Weather" parent="." instance=ExtResource( 14 )]
