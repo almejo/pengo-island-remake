@@ -148,7 +148,7 @@ z_index = -1
 position = Vector2( -24, 192 )
 
 [node name="tree2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 416, 568 )
+position = Vector2( 416, 576 )
 
 [node name="Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 544, 576 )
@@ -159,16 +159,16 @@ collision_layer = 2147483648
 collision_mask = 2147483648
 
 [node name="tree3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1632, 568 )
+position = Vector2( 1632, 576 )
 
 [node name="Pole2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1568, 544 )
 
 [node name="tree4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1952, 184 )
+position = Vector2( 1952, 192 )
 
 [node name="tree5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2528, 184 )
+position = Vector2( 2528, 192 )
 
 [node name="StaticSnowMan" parent="." instance=ExtResource( 8 )]
 position = Vector2( 2152, 576 )
