@@ -1,16 +1,23 @@
 extends KinematicBody2D
 
+class_name Pengo
+
 export var speed: Vector2 = Vector2(250.00, 900.0)
 var _velocity: Vector2 = Vector2.ZERO
 export var gravity: float = 4000.0
 
+var death: bool = false
+
 func _physics_process(delta):
 	_velocity.y += gravity * delta
-		
-	var direction: = get_direction()
-	play_animation()
-	_velocity =  calculate_move_velocity(_velocity, direction, speed, false)
-	_velocity = move_and_slide(_velocity, Vector2.UP)
+	
+	if death:
+		$AnimatedSprite.play("death")
+	else: 
+		var direction: = get_direction()
+		play_animation()
+		_velocity =  calculate_move_velocity(_velocity, direction, speed, false)
+		_velocity = move_and_slide(_velocity, Vector2.UP)
 	
 func get_direction() -> Vector2:
 	return Vector2(
@@ -40,3 +47,7 @@ func play_animation():
 		$AnimatedSprite.play("walk")
 	else:
 		$AnimatedSprite.play("idle")
+
+
+func _on_KillArea_body_entered(body: KinematicBody2D):
+	death = true

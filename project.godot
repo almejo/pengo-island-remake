@@ -8,9 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "Door",
+"language": "GDScript",
+"path": "res://src/objects/Door.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Pengo",
+"language": "GDScript",
+"path": "res://src/actors/Pengo.gd"
+} ]
 _global_script_class_icons={
-
+"Door": "",
+"Pengo": ""
 }
 
 [application]
