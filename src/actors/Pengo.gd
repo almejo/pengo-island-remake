@@ -13,6 +13,7 @@ func _physics_process(delta):
 	
 	if death:
 		$AnimatedSprite.play("death")
+		$Particles2D.emitting = false
 	else: 
 		var direction: = get_direction()
 		play_animation()
@@ -42,10 +43,13 @@ func play_animation():
 	if Input.is_action_pressed("left"):
 		$AnimatedSprite.flip_h = false
 		$AnimatedSprite.play("walk")
+		$Particles2D.emitting = true
 	elif Input.is_action_pressed("right"):
 		$AnimatedSprite.flip_h = true
 		$AnimatedSprite.play("walk")
+		$Particles2D.emitting = true
 	else:
+		$Particles2D.emitting = false
 		$AnimatedSprite.play("idle")
 
 
