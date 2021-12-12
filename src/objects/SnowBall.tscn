@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/objects/SnowBall.gd" type="Script" id=1]
+[ext_resource path="res://assets/objects/snowball/snowball.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 8.0
+
+[sub_resource type="ParticlesMaterial" id=2]
+lifetime_randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 8.0
+flag_disable_z = true
+direction = Vector3( 0, -2, 0 )
+gravity = Vector3( 0, 50, 0 )
+initial_velocity = 10.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 3.0
+scale_random = 1.0
+
+[node name="SnowBall" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+z_index = -1
+amount = 40
+lifetime = 0.4
+local_coords = false
+process_material = SubResource( 2 )
+
+[node name="snowball" type="Sprite" parent="."]
+texture = ExtResource( 2 )
