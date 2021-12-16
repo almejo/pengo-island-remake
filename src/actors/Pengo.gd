@@ -46,7 +46,6 @@ func _get_input():
 		velocity.x = move_velocity * move_direction #lerp(velocity.x, move_velocity * move_direction, 0.6)
 
 func _on_KillArea_body_entered(body: KinematicBody2D):
-	print("kill")
 	emit_signal("death")
 
 func shoot_snow_ball():

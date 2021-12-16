@@ -205,9 +205,6 @@ stream = ExtResource( 10 )
 [node name="Squimo" parent="." instance=ExtResource( 12 )]
 position = Vector2( 463, 192 )
 
-[node name="SnowMan" parent="Squimo" instance=ExtResource( 16 )]
-position = Vector2( 592, 384 )
-
 [node name="GreenGem" parent="." instance=ExtResource( 11 )]
 position = Vector2( 3752, 416 )
 
@@ -240,3 +237,9 @@ position = Vector2( 2608, 576 )
 
 [node name="SnowMan2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 1144, 320 )
+
+[node name="Squimo2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 776, 576 )
+
+[node name="SnowMan3" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1088, 576 )
